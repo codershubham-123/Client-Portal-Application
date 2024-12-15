@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClientPortalFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# Client-Portal-Application
+This is a client portal frontend application designed for managing job application repositories. It interacts with a backend system to provide seamless access and functionality for users to track and manage job applications efficiently.
+>>>>>>> ee43f5d30f257ddbf94f38e9c555d81ad8196974
