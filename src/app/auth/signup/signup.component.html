@@ -1,0 +1,56 @@
+<div class="signup-container">
+    <div class="signup-card">
+      <h2 class="signup-title">Create New Account</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            formControlName="username"
+            placeholder="Enter your username"
+            [class.invalid]="signupForm.get('username')?.invalid && signupForm.get('username')?.touched"
+          />
+          <small *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+            Username is required and must be at least 3 characters long.
+          </small>
+        </div>
+    
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="Enter your email"
+            [class.invalid]="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"
+          />
+          <small *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+            A valid email is required.
+          </small>
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            placeholder="Enter your password"
+            [class.invalid]="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+          />
+          <small *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+            Password is required and must be at least 6 characters long.
+          </small>
+        </div>
+    
+        <button type="submit" [disabled]="signupForm.invalid">
+          Sign Up
+        </button>
+      </form>
+      <div class="existing-user">
+        <p>Already have an account? <a routerLink="/auth/login">Login</a></p>
+      </div>
+    </div>
+  </div>
+  
